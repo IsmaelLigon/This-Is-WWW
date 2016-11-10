@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kick's Wear</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .container{
+      margin-top: 40px;
+    }
+    #main-nav li:not(:last-child) {
+    padding-top: 5px;
+}
+    function checkWidth(init)
+{
+    /*If browser resized, check width again */
+    if ($(window).width() < 751) {
+        $('#main-nav').addClass('nav-stacked');
+        $('#logo').empty();
+        //console.log($(window).width());
+    } else if ($(window).width() > 750){
+        if (!init) {
+            $('#main-nav').removeClass('nav-stacked');
+            $('#logo').html('<a class="navbar-brand" href="index.html"><img class="logo" src="img/New_AMSI_Logo_200px.png" /></a>');
+            //console.log($(window).width());
+        }
+    }
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
+                        <span class="glyphicon glyphicon-option-vertical"></span>
+                    </button>
+      <a class="navbar-brand" href="Home.html">Kick's Wear</a>
+    </div>
+    <div class="navbar-collapse collapse" id="collapse-1" aria-expanded="false">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="Home.html">Home</a></li>
+      <li><a href="Product.html">Product</a></li>
+      <li><a href="Contact.html">Contact Us</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="Sign Up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+<div class="container">
+  <h2>Contact Us</h2>
+  <form role="form">
+    <div class="col-md-6">
+    <div class="form-group">
+      <label for="usr">Name: <input type="text" class="form-control" id="usr" placeholder="Enter name"></label>  
+      
+    </div>
+
+    <div class="form-group">
+      <label for="usr">Email: <input type="text" class="form-control" id="usr" placeholder="Enter email"></label>  
+      
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Message:</label>
+      <textarea class="form-control" rows="5" id="comment" placeholder="Enter message"></textarea>
+    </div>
+    
+    <div class="form-group">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+  </form>
+</div>
+
+</body>
+</html>
